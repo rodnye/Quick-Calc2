@@ -1,2 +1,10 @@
-# MatII-Quizzer
-Plataforma interactiva con algunos contenidos de interés y preguntas sobre la asignatura Cálculo II en la CUJAE
+# Quick-Calc2
+
+Una aplicación minimalista de repaso para Cálculo II de Ingeniería Informática (CUJAE), construida con Nuxt 3.
+
+## 🚀 Características
+
+- Preguntas esenciales de Cálculo II
+- Explicaciones claras y concisas
+- Autoevaluación inmediata
+- Enfoque en temas clave de la carrera
