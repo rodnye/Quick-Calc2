@@ -2,7 +2,8 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { FrontendService } from './frontend/frontend.service';
+import { FrontendService } from './services/frontend/frontend.service';
+import path from 'path';
 
 @Module({
   imports: [
@@ -10,11 +11,17 @@ import { FrontendService } from './frontend/frontend.service';
       isGlobal: true,
       envFilePath: '.env',
       validate(config) {
+        config['lessonsPath'] = path.join(__dirname, '../lessons');
+
+        // for the moment, not have required env
+
         return config;
       },
       validationSchema: {
         PORT: Number,
         FRONTEND_URL: String,
+
+        lessonPath: String,
       },
     }),
   ],
